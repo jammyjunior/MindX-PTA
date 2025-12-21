@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Elegant Notes</string>
+  </property>
+
+  <!-- CENTRAL -->
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+
+    <!-- LEFT PANEL -->
+    <item>
+     <widget class="QFrame" name="leftPanel">
+      <property name="minimumWidth">
+       <number>220</number>
+      </property>
+      <property name="styleSheet">
+       <string>
+        QFrame { background-color: #f5f6fa; }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_left">
+
+       <item>
+        <widget class="QLabel" name="labelNotes">
+         <property name="text">
+          <string>📒 Your Notes</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QListWidget" name="listNotes"/>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnNewNote">
+         <property name="text">
+          <string>＋ New Note</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <!-- RIGHT PANEL -->
+    <item>
+     <widget class="QWidget" name="rightPanel">
+      <layout class="QVBoxLayout" name="verticalLayout_right">
+
+       <item>
+        <widget class="QLineEdit" name="editTitle">
+         <property name="placeholderText">
+          <string>Note title...</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QTextEdit" name="editContent">
+         <property name="placeholderText">
+          <string>Write something beautiful here...</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <!-- TOOLBAR -->
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>Tools</string>
+   </property>
+   <addaction name="actionSave"/>
+   <addaction name="actionDelete"/>
+  </widget>
+
+  <!-- ACTIONS -->
+  <action name="actionSave">
+   <property name="text">
+    <string>💾 Save</string>
+   </property>
+  </action>
+
+  <action name="actionDelete">
+   <property name="text">
+    <string>🗑 Delete</string>
+   </property>
+  </action>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
