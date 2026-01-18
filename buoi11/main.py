@@ -21,10 +21,12 @@ class Login(QMainWindow):
             self.msg_box.setIcon(QMessageBox.Icon.Warning)
             self.msg_box.exec()
         elif usernameInput != "admin" or passwordInput != "admin":
+            print("Login failed!")
             self.msg_box.setText("Error! Wrong username or password!")
             self.msg_box.setIcon(QMessageBox.Icon.Warning)
             self.msg_box.exec()
         else:
+            print("Detect login!")
             main.show()
             self.close()
     def showRegister(self):
@@ -92,9 +94,11 @@ class Main(QMainWindow):
 
     def forwardToBrowser(self, artist, platform):
         webbrowser.open(self.url[artist][platform])
+        print("Opened link in browser!")
     
 
 if __name__ == '__main__':
+    print("Started main.py")
     app = QApplication(sys.argv)
     login = Login()
     login.show()
